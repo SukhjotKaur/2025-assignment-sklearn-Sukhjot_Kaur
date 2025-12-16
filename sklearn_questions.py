@@ -65,8 +65,7 @@ from sklearn.utils.multiclass import check_classification_targets
 class KNearestNeighbors(ClassifierMixin, BaseEstimator):
     """KNearestNeighbors classifier."""
 
-    def __init__(self, n_neighbors=1): # noqa: D107
-        """Initialize the KNearestNeighbors instance."""
+    def __init__(self, n_neighbors=1):  # noqa: D107
         self.n_neighbors = n_neighbors
 
     def fit(self, X, y):
@@ -167,8 +166,7 @@ class MonthlySplit(BaseCrossValidator):
         To use the index as column just set `time_col` to `'index'`.
     """
 
-    def __init__(self, time_col='index'): # noqa: D107
-        """Initialize the MonthlySplit instance."""
+    def __init__(self, time_col='index'):  # noqa: D107
         self.time_col = time_col
 
     def __repr__(self):
