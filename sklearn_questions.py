@@ -64,7 +64,6 @@ from sklearn.utils.multiclass import check_classification_targets
 
 class KNearestNeighbors(ClassifierMixin, BaseEstimator):
     """KNearestNeighbors classifier."""
-
     def __init__(self, n_neighbors=1):  # noqa: D107
         self.n_neighbors = n_neighbors
 
@@ -165,12 +164,11 @@ class MonthlySplit(BaseCrossValidator):
         for which this column is not a datetime, it will raise a ValueError.
         To use the index as column just set `time_col` to `'index'`.
     """
-
     def __init__(self, time_col='index'):  # noqa: D107
         self.time_col = time_col
 
     def __repr__(self):
-        """Return a concise representation of the MonthlySplit.       """
+        """Return a concise representation of the MonthlySplit."""
         return f"MonthlySplit(time_col='{self.time_col}')"
 
     def get_n_splits(self, X, y=None, groups=None):
