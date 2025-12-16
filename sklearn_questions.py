@@ -170,6 +170,7 @@ class MonthlySplit(BaseCrossValidator):
         self.time_col = time_col
 
     def __repr__(self):
+        """Return a concise representation of the MonthlySplit.       """
         return f"MonthlySplit(time_col='{self.time_col}')"
 
     def get_n_splits(self, X, y=None, groups=None):
@@ -190,7 +191,6 @@ class MonthlySplit(BaseCrossValidator):
         n_splits : int
             The number of splits.
         """
-
         if self.time_col == "index":
             time = X.index
         else:
